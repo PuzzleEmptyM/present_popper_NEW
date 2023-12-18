@@ -8,7 +8,6 @@ public class SantaMovement : MonoBehaviour
     private float Move;
     public Animator animator;
     public float jump;
-
     public bool isJumping;
     private Rigidbody2D rb;
     // Start is called before the first frame update
@@ -29,6 +28,15 @@ public class SantaMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isJumping == false)
         {
             rb.AddForce(new Vector2(rb.velocity.x, jump));
+        }
+
+        if (Input.GetMouseButton(0))
+        {
+            animator.SetBool("IsLaunching", true);
+        }
+        else
+        {
+            animator.SetBool("IsLaunching", false);
         }
     }
 
