@@ -38,8 +38,11 @@ public class SantaMovement : MonoBehaviour
     }
     public void PopAnimation()
     {
-        animator.SetBool("IsPopped", true);
-        animator.SetBool("IsLaunching", false);
+        if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Santa_Popped"))
+        {
+            animator.SetBool("IsPopped", true);
+            animator.SetBool("IsLaunching", false);
+        }
     }
 
     public void ResetAnimations()
