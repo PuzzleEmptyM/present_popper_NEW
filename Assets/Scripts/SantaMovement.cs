@@ -34,14 +34,18 @@ public class SantaMovement : MonoBehaviour
             isJumping = true;
         }
 
-        if (Input.GetMouseButton(0))
-        {
-            animator.SetBool("IsLaunching", true);
-        }
-        else
-        {
-            animator.SetBool("IsLaunching", false);
-        }
+        animator.SetBool("IsLaunching", Input.GetMouseButton(0));
+    }
+    public void PopAnimation()
+    {
+        animator.SetBool("IsPopped", true);
+        animator.SetBool("IsLaunching", false);
+    }
+
+    public void ResetAnimations()
+    {
+        animator.SetBool("IsLaunching", false);
+        animator.SetBool("IsPopped", false);
     }
 
     private void OnCollisionEnter2D(Collision2D other)
