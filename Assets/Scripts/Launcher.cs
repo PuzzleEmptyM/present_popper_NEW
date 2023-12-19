@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Launcher : MonoBehaviour
 {
-    [SerializeField] private GameObject present;
+    [SerializeField] private GameObject[] presentPrefabs;
     [SerializeField] private float launchForce = 10f;
     [SerializeField] private Transform playerTransform;
     [SerializeField] private GameObject crosshair; // Reference to the crosshair GameObject
@@ -19,7 +19,10 @@ public class Launcher : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) // Checks if the left mouse button was pressed
         {
             Vector2 launchDirection = (crosshair.transform.position - playerTransform.position).normalized;
-            GameObject presentInst = Instantiate(present, playerTransform.position, Quaternion.identity);
+
+            int randomIndex = Random.Range(0, presentPrefabs.Length);
+
+            GameObject presentInst = Instantiate(presentPrefabs[randomIndex], playerTransform.position, Quaternion.identity);
             Rigidbody2D rb = presentInst.GetComponent<Rigidbody2D>();
 
             if (rb != null)
