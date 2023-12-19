@@ -5,29 +5,32 @@ using UnityEngine;
 public class SantaMovement : MonoBehaviour
 {
     public float speed;
-    private float Move;
+    private float move;
     public Animator animator;
-    public float jump;
+    public float jumpForce = 18f;
+    private float gravityScaleValue = 8.0f;
     public bool isJumping;
     private Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        rb.gravityScale = gravityScaleValue;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Move = Input.GetAxis("Horizontal");
+        move = Input.GetAxis("Horizontal");
 
-        animator.SetFloat("Speed", Move);
+        animator.SetFloat("Speed", move);
+        rb.velocity = new Vector2(speed * move, rb.velocity.y);
 
-        rb.velocity = new Vector2(speed * Move, rb.velocity.y);
-
-        if (Input.GetButtonDown("Jump") && isJumping == false)
+        if (Input.GetButtonDown("Jump") && !isJumping)
         {
-            rb.AddForce(new Vector2(rb.velocity.x, jump));
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce); // Use jump force
+            isJumping = true;
         }
 
         if (Input.GetMouseButton(0))

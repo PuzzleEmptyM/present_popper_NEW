@@ -1,34 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class Launcher : MonoBehaviour
 {
     [SerializeField] private GameObject present;
-    [SerializeField] private Transform prsentSpawnPoint;
+    [SerializeField] private float launchForce = 10f;
+    [SerializeField] private Transform playerTransform;
+    [SerializeField] private GameObject crosshair; // Reference to the crosshair GameObject
 
-    private GameObject presentInst;
-    private Vector2 worldPosition;
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        MouseLocation();
         LauncherLaunching();
-    }
-
-    private void MouseLocation()
-    {
-        worldPosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-        direction = (worldPosition - (Vector2)Player.transform.position).normalized;
     }
 
     private void LauncherLaunching()
     {
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        if (Input.GetMouseButtonDown(0)) // Checks if the left mouse button was pressed
         {
-            presentInst = Instantiate(present, prsentSpawnPoint);
+            Vector2 launchDirection = (crosshair.transform.position - playerTransform.position).normalized;
+            GameObject presentInst = Instantiate(present, playerTransform.position, Quaternion.identity);
+            Rigidbody2D rb = presentInst.GetComponent<Rigidbody2D>();
+
+            if (rb != null)
+            {
+                rb.AddForce(launchDirection * launchForce, ForceMode2D.Impulse);
+            }
         }
     }
 }
