@@ -21,9 +21,10 @@ Enjoy the game! <br>
 <br>
 <br>
 # Screenshots
-<img width="250" alt="Screenshot 2023-12-19 165123" src="https://github.com/PuzzleEmptyM/present_popper_NEW/assets/129412985/52717d04-7969-4569-8412-5b500a82c7c8"> <br>
-<img width="250" alt="Screenshot 2023-12-19 165050" src="https://github.com/PuzzleEmptyM/present_popper_NEW/assets/129412985/bfb492fa-8cc9-4833-ba9e-2f35c00e7f34"> <br>
-<img width="250" alt="Screenshot 2023-12-19 164933" src="https://github.com/PuzzleEmptyM/present_popper_NEW/assets/129412985/58692cf9-929b-4688-ad19-63bdc30c6333"> <br>
+<img width="350" alt="Screenshot 2023-12-19 165123" src="https://github.com/PuzzleEmptyM/present_popper_NEW/assets/129412985/52717d04-7969-4569-8412-5b500a82c7c8"> <br>
+<img width="350" alt="Screenshot 2023-12-19 165050" src="https://github.com/PuzzleEmptyM/present_popper_NEW/assets/129412985/bfb492fa-8cc9-4833-ba9e-2f35c00e7f34"> <br>
+<img width="350" alt="Screenshot 2023-12-19 164933" src="https://github.com/PuzzleEmptyM/present_popper_NEW/assets/129412985/58692cf9-929b-4688-ad19-63bdc30c6333"> <br>
+<img width="350" alt="Screenshot 2023-12-19 020452" src="https://github.com/PuzzleEmptyM/present_popper_NEW/assets/129412985/28107b49-3e85-423e-a964-0f35b1e2cd2a"> <br>
 
 December 19, 2023 <br>
 Jagger Van Winkle & Puzzle Moser
