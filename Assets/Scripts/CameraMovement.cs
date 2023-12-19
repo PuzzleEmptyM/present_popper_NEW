@@ -8,6 +8,7 @@ public class FollowTargetCamera : MonoBehaviour
     public float minX, maxX; // Camera boundaries
 
     private Camera cam;
+    public bool canFollow = true;
 
     void Start()
     {
@@ -16,6 +17,8 @@ public class FollowTargetCamera : MonoBehaviour
 
     void Update()
     {
+        if (!canFollow) return;
+        
         Vector3 targetViewportPos = cam.WorldToViewportPoint(target.transform.position);
 
         if (targetViewportPos.x > rightFollowThreshold || targetViewportPos.x < leftFollowThreshold)
@@ -24,5 +27,9 @@ public class FollowTargetCamera : MonoBehaviour
             newXPosition = Mathf.Clamp(newXPosition, minX, maxX); // Clamp the camera's X position within the boundaries
             transform.position = new Vector3(newXPosition, transform.position.y, transform.position.z);
         }
+    }
+    public void SetCameraFollow(bool follow)
+    {
+        canFollow = follow;
     }
 }
