@@ -25,4 +25,5 @@ Enjoy the game! <br>
 <img width="250" alt="Screenshot 2023-12-19 165050" src="https://github.com/PuzzleEmptyM/present_popper_NEW/assets/129412985/bfb492fa-8cc9-4833-ba9e-2f35c00e7f34"> <br>
 <img width="250" alt="Screenshot 2023-12-19 164933" src="https://github.com/PuzzleEmptyM/present_popper_NEW/assets/129412985/58692cf9-929b-4688-ad19-63bdc30c6333"> <br>
 
-Jagger & Puzzle
+December 19, 2023 <br>
+Jagger Van Winkle & Puzzle Moser
