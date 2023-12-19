@@ -5,7 +5,7 @@ using UnityEngine;
 public class Launcher : MonoBehaviour
 {
     [SerializeField] private GameObject[] presentPrefabs;
-    [SerializeField] private float launchForce = 17f;
+    [SerializeField] private float launchForce = 20f;
     [SerializeField] private Transform playerTransform;
     [SerializeField] private GameObject crosshair;
     [SerializeField] private SantaMovement santaMovement;

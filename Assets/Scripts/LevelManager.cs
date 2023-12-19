@@ -37,6 +37,10 @@ public class LevelManager : MonoBehaviour
         // Load the next level
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-
+    public void LoadPreviousLevel()
+    {
+        // Load the next level
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
     // Add methods to load/reload levels triggered by UI buttons
 }
