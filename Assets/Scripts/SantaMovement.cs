@@ -7,7 +7,7 @@ public class SantaMovement : MonoBehaviour
     public float speed;
     private float move;
     public Animator animator;
-    public float jumpForce = 18f;
+    [SerializeField] private float jumpForce = 18f;
     private float gravityScaleValue = 8.0f;
     public bool isJumping;
     private Rigidbody2D rb;
@@ -17,6 +17,7 @@ public class SantaMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         rb.gravityScale = gravityScaleValue;
+        Debug.Log("Jump Force on Start: " + jumpForce);
     }
 
     // Update is called once per frame
