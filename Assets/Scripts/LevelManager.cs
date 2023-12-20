@@ -26,6 +26,11 @@ public class LevelManager : MonoBehaviour
         endLevelMenu.SetActive(true);
     }
 
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     public void ReplayLevel()
     {
         // Reload the current level
